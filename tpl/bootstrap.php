@@ -591,7 +591,7 @@ endif;
                         ?>
 					</p>
 				</div>
-			</footer>
+		
 		</main>
 <?php
 if ($DISCUSSION) :
