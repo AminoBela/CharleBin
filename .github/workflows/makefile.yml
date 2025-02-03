@@ -14,14 +14,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: configure
-      run: make install
+    - name: configure PHP
+      uses: shivamathur/setup-php@v2
+      with: 
+        php-version: '8.2'
+        tools: composer
 
     - name: Install dependencies
-      run: make
+      run: make install
 
-    - name: Run check
-      run: make check
+    - name: Run lint
+      run: make lint
 
-    - name: Run distcheck
-      run: make distcheck
